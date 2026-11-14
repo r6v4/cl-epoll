@@ -4,6 +4,8 @@ common-lisp epoll written by doubao
 ```common-lisp
 (ql:quickload "cffi")
 
+(load "src.lisp")
+
 (setf my-socket (make-instance 'sb-bsd-sockets:inet-socket :type :stream :protocol :tcp))
 (setf my-address (sb-bsd-sockets:make-inet-address "127.0.0.1"))
 (sb-bsd-sockets:socket-bind my-socket my-address 8888 :reuse-address t)
