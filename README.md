@@ -30,4 +30,6 @@ common-lisp epoll written by doubao
 
 (epoll-control-delete *epfd* my-fd)
 
+(epoll-close *epfd*)
+
 ```
