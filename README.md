@@ -26,4 +26,6 @@ common-lisp epoll written by doubao
     (format t "~A" fd)
     (finish-output)))
 
+(epoll-control-delete *epfd* my-fd)
+
 ```
