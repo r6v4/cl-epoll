@@ -14,7 +14,7 @@ common-lisp epoll written by doubao
 (setf my-client (sb-bsd-sockets:socket-accept my-socket))
 (setf my-fd (sb-bsd-sockets:socket-file-descriptor my-client))
 
-;; 添加一个 fd 监听可读事件（边缘触发）
+;; 添加一个 fd 监听可读事件
 (epoll-control-add *epfd* my-fd (logior +epoll-in+))
 
 ;; 等待事件，最多返回 32 个，永久阻塞
